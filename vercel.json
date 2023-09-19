@@ -1,6 +1,15 @@
 {
-    "routes": [
-      { "src": "/[^.]+", "dest": "/", "status": 200 }
+    "rewrites": [
+      {
+        "source": "/:path((?!api/).*)",
+        "destination": "/index.html"
+      },
+      {
+        "source": "/:path(api/.*)",
+        "destination": "/api"
+      }
     ]
-  }
+}
+
+
 
