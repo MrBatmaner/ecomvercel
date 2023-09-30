@@ -1,0 +1,9 @@
+[build]
+command = "CI='' yarn run build"
+publish = ".next"
+base ="/"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
